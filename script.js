@@ -114,13 +114,14 @@ function getDiagonal() {
         [4, 5, 6, 7, 8],
         [5, 6, 7, 8, 9],
     ]
-
+    let diagonal = []
     for (let i = 0; i < matriz.length; i++) {
         for (let j = 0; j < matriz.length; j++) {
             if (i == j) {
-               console.log(matriz[i][j])
+               diagonal += matriz[i][j]
             }
         }
     }
+    return diagonal.split("").join(", ")
 }
 console.log(getDiagonal());
